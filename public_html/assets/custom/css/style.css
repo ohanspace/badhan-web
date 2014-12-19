@@ -1,0 +1,16 @@
+
+
+/*login or sign up*/
+
+#loginbox{
+    margin-top:50px;
+}
+.panel-heading .forgot-psw{
+    float:right;
+    font-size: 80%; 
+    position: relative; 
+    top:-10px
+}
+.panel-body{
+    padding-top:30px;
+}
