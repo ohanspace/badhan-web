@@ -1,8 +1,10 @@
 <?php
 class Committee_M extends MY_Model {
 	
-	protected $_table_name = 'central_committee';	
-	protected $_order_by = 'committee_year';                
+	protected $_table_name = 'committee';	
+	protected $_primary_key = 'committee_id';
+	protected $_order_by = 'committee_year'; 
+	protected $_created_timestamp = true;               
         
 	
 	function __construct() {
@@ -11,12 +13,12 @@ class Committee_M extends MY_Model {
   
 	}
 	
-	public function get_all_committee_years(){
-		$query = "SELECT distinct committee_year FROM {$this->_table_name}";
-		$years = $this->db->query($query)->result();
-		dump($years);
+	public function get_existing_committees($organogram_id){
+	
 		
 	}
+	
+	
            
        
         

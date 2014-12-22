@@ -8,7 +8,8 @@
 ?>
 
 <div class="well text-center " style="position: relative; top: 5px;">
-<h4><?php echo $organogram->name_in_bangla?> | <?php echo $organogram->name?></h4>
+<h4><?php echo $organogram->name_in_bangla?> | <?php echo $organogram->name?></h4> 
+<h5><a href='<?php echo site_url('committee/index/'.$organogram->organogram_id)?>'>Committee</h5>
 
 </div>
 <!--load organogram info -->

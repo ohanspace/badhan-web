@@ -80,6 +80,16 @@ $config['occupation'] = array(
 		
 );
 
+$config['edu_level'] = array(
+	
+		'Honours 1st year' => 'Honours 1st year',
+		'Honours 2nd year' => 'Honours 2nd year',
+		'Honours 3rd year' => 'Honours 3rd year',
+		'Honours 4th year' => 'Honours 4th year',
+		'Masters 1st year' => 'Masters 1st year',
+		'Masters 2nd year' => 'Masters 2nd year'
+);
+
 //$config['height_pattern'] = "/^[3-8]\'(([0-9]|(1[0-1]))("|''))?$/";
 
 

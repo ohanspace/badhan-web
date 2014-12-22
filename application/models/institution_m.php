@@ -9,6 +9,27 @@ class Institution_M extends MY_Model{
         
     }
     
+    function get_organogram_institution_array($organogram_id){
+    	$organogram = $this->organogram_m->get($organogram_id);
+    	if(empty($organogram->institution_id)){
+    		$query = "SELECT DISTINCT organogram.institution_id, institution.name
+						FROM organogram JOIN institution USING(institution_id)
+						WHERE organogram.parent_id = {$organogram_id}";
+    	}else {
+    		$query = "SELECT * FROM institution WHERE institution_id = {$organogram->institution_id}";
+    	}
+    	
+    	$institutions = $this->db->query($query)->result();
+    	
+    	foreach ($institutions as $institution){
+    		$array[$institution->institution_id] = $institution->name;
+    	}
+    	
+    	return $array;
+    	
+    	
+    }
+    
     function get_new(){
         $institution = new stdClass();
         $institution->name = '';
