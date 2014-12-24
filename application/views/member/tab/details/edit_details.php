@@ -73,7 +73,7 @@
                             </label>
                             
                             <label class="radio-inline">
-                                <input type="radio" name="marital_status" value="UNMARRIED" <?php echo set_radio('marital_status',$member->details->merital_status);?>> UNMARRIED
+                                <input type="radio" name="marital_status" value="UNMARRIED" <?php echo set_radio('marital_status',$member->details->marital_status);?>> UNMARRIED
                             </label>
                           
                         </div>                           

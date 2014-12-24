@@ -250,8 +250,8 @@ if($website_state == 'OFF' &&
      
 require_once BASEPATH.'core/CodeIgniter.php';
 
-//$x =& get_instance();
-//dump($x->session->all_userdata());
+$x =& get_instance();
+dump($x->session->all_userdata());
 //dump(get_declared_classes ());
 
 /* End of file index.php */

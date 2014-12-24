@@ -15,6 +15,13 @@
            </ul>
            
            <ul class="loginbar">
+           
+           <?php if($this->session->userdata('role') != NULL 
+           			&& $this->session->userdata('role') != 5):?>
+	           <li><a href="<?php echo site_url('admin/dashboard')?>" class="login-btn">Admin Panel</a></li> 
+	           <li class="devider">&nbsp;</li>
+           <?php endif;?>
+           
            <li><a href="http://badhan.org:2096" class="login-btn">Email Box</a></li> 
            <li class="devider">&nbsp;</li>
              <?php if($this->session->userdata('member_loggedin') == TRUE):?>

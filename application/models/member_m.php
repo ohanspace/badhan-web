@@ -35,11 +35,21 @@ class Member_M extends MY_Model {
 				'name' => $member->name,
 				'telephone' => $this->input->post('telephone'),
 				'member_id' => $member->member_id,
-                                'unit_id' => $member->unit_id,
 				'member_loggedin' => TRUE,
+				'role' => $member->role,
+				'role_for' => $member->role_for, //which organogram node he can access
 			);
 			$this->session->set_userdata($data);
 		}
+	}
+	
+	public function admin_loggedin(){
+		
+		$role = $this->session->userdata('role');	
+		if($this->loggedin() == true && $role != 5){
+			return true;
+		}else return false;
+		
 	}
 	public function logout ()
 	{

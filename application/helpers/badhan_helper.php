@@ -40,12 +40,7 @@ function about_organogram($organogram_type, $about){
 	}
 }
 
-function addhttp($url) {
-	if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
-		$url = "http://" . $url;
-	}
-	return $url;
-}
+
 
 function eagerness_scale_label($value){
 	switch ($value){

@@ -38,7 +38,7 @@
                     <!-- Sidebar -->
                     <div class="col-md-2">
                             <section>
-                                    <?php echo anchor('admin/user/logout', '<i class="glyphicon glyphicon-off"></i> logout'); ?>
+                                    <?php echo anchor('member/logout', '<i class="glyphicon glyphicon-off"></i> logout'); ?>
                             </section>
                         <h3>Controllers</h3>
                         <ul class="nav nav-pills nav-stacked">
